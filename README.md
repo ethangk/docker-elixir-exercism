@@ -1,1 +1,1 @@
-docker-compose run elixir bash
+`docker-compose run elixir bash`
