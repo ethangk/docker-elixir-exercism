@@ -2,7 +2,7 @@ version: '2'
 services:
   elixir:
     build: .
-    entrypoint: docker-entrypoint.sh
+    entrypoint: /code/docker-entrypoint.sh
     volumes:
       - .:/code
     env_file: envs.env
