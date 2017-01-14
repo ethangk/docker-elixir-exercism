@@ -14,8 +14,9 @@ defmodule SpaceAge do
   """
   @spec age_on(planet, pos_integer) :: float
   def age_on(planet, seconds) do
+    value = Map.get(@offsets, planet)
     case Map.get(@offsets, planet) do
-      nil -> Raise "Something"
+      nil -> raise ArgumentError, message: "Invalid arguement planet"
       _ -> seconds / (@earth_year * @offsets[planet])
     end
   end
